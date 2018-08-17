@@ -558,9 +558,8 @@ header.head .container .container_content_item.item-logotype {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -50%);
   overflow: hidden;
-  border: solid 1px white;
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 10px 5px rgba(15, 0, 26, 0.25);
   -moz-box-shadow: 0px 0px 10px 5px rgba(15, 0, 26, 0.25);
@@ -626,10 +625,11 @@ header.head .container .container_content_item.item-txtmodule {
 header.head .container .container_content_item.item-txtmodule h1 {
   color: white;
   margin: 0;
-  padding: 55px 0 0 0;
+  padding: 135px 0 0 0;
   font-family: "Roboto", sans-serif;
-  font-size: 2.5rem;
-  letter-spacing: 0.1rem;
+  font-weight: 400 !important;
+  font-size: 2.4rem;
+  letter-spacing: 0.2rem;
 }
 
 header.head .container .container_content_item.item-txtmodule ul {
@@ -640,25 +640,37 @@ header.head .container .container_content_item.item-txtmodule ul {
   left: 0;
   width: 70%;
   list-style-position: inside;
-  color: #ff9500;
   bottom: 100px;
-  padding: 5%;
   list-style: none;
-  padding: 0;
   margin: 0;
 }
 
 header.head .container .container_content_item.item-txtmodule ul li {
-  color: #ff9500;
   margin: 0;
+  padding-left: 2%;
   width: 100%;
   border-radius: 5px;
+  color: white;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+  position: relative;
+}
+
+header.head .container .container_content_item.item-txtmodule ul li .dotinli {
+  width: 7px;
+  height: 7px;
+  border-radius: 7px;
+  position: absolute;
+  background-color: white;
+  left: -15%;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 5;
 }
 
 header.head .container .container_content_item.item-txtmodule ul li span {
   color: white;
-  font-weight: 200;
-  letter-spacing: 0.2rem;
 }
 
 header.head .container .container_content_item.item-txtmodule ul li:hover {
@@ -747,7 +759,7 @@ header.head .container .container_content_item.item-downlink {
   height: 40px;
   border-radius: 30px;
   position: absolute;
-  bottom: 0;
+  bottom: 3%;
   left: 50%;
   transform: translate(-50%, -20px);
   border: solid 2px white;

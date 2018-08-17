@@ -59,6 +59,7 @@ header.head {
                 clip-path: polygon(69.9% 0, 70% 0, 100% 100%, 99.9% 100%);
             }
         }
+      
         .container_content_item.item-logotype {
             width: 200px;
             height: 200px;
@@ -66,9 +67,9 @@ header.head {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -60%);
+            transform: translate(-50%, -50%);
             overflow: hidden;
-            border: solid 1px white;
+            //border: solid 1px white;
             border-radius: 5px;
             @include shadow-nav();
             transition: all 500ms;
@@ -118,10 +119,11 @@ header.head {
             h1 {
                 color: white;
                 margin: 0;
-                padding: 55px 0 0 0;
+                padding: 135px 0 0 0;
                 font-family: $sans;
-                font-size: 2.5rem;
-                letter-spacing: 0.1rem;
+                font-weight: 400!important;
+                font-size: 2.4rem;
+                letter-spacing: 0.2rem;
             }
             ul {
                 color: white;
@@ -131,21 +133,36 @@ header.head {
                 left: 0;
                 width: 70%;
                 list-style-position: inside;
-                color: $yellow;
+                //color: $yellow;
                 bottom: 100px;
-                padding: 5%;
+                //padding: 5%;
                 list-style: none;
-                padding: 0;
+                //padding: 0;
                 margin: 0;
                 li {
-                    color: $yellow;
+                    //color: $yellow;
                     margin: 0;
+                    padding-left: 2%;
                     width: 100%;
                     border-radius: 5px;
+                   color: white;
+                   font-weight: 200;
+                   letter-spacing: 0.1rem;
+                   font-size: 1.4rem;
+                    position: relative;
+                    .dotinli {
+                        width: 7px;
+                        height: 7px;
+                        border-radius: 7px;
+                        position: absolute;
+                        background-color: white;
+                        left: -15%;
+                        top: 50%;
+                        transform: translate(0,-50%);
+                        z-index: 5;
+                    }
                     span {
                         color: white;
-                        font-weight: 200;
-                        letter-spacing: 0.2rem;
                     }
                     &:hover {
                         background-color: rgba(255, 255, 255, 0.1);
@@ -215,7 +232,7 @@ header.head {
             height: 40px;
             border-radius: 30px;
             position: absolute;
-            bottom: 0;
+            bottom: 3%;
             left: 50%;
             transform: translate(-50%, -20px);
             border: solid 2px white;

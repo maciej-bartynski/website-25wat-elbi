@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', initNavBar);
 
 function initNavBar() {
     initSearchBtn();
-    initScrollNavi();
+    //initScrollNavi();
 }
-export function navBarHeight() {
+function navBarHeight() {
     let nav = document.querySelector('.elbi-nav nav').offsetHeight;
     return nav;
 }

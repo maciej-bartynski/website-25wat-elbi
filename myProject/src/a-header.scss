@@ -143,3 +143,165 @@ header.head {
         }
     }
 }
+
+/**********************/
+
+@keyframes fixednav {
+    from {
+        top: -200px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+div.elbi-nav {
+    width: 100%;
+    @include shadow-nav; //padding: 10px 0;
+    z-index: 10;
+    nav {
+        &.fixed {
+            position: fixed;
+            left: 0;
+            @include shadow-nav;
+            animation: fixednav 300ms ease forwards;
+        }
+        z-index: 10;
+        background-color: white;
+        padding: 0 5%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 4fr 1fr auto;
+        grid-template-rows: auto;
+        grid-column-gap: 1%;
+        @media only screen and (max-width: 1450px) {
+            grid-template-columns: auto auto auto auto;
+        }
+        @media only screen and (max-width: 1300px) {
+            grid-template-columns: 1fr 6fr 1fr;
+            grid-template-rows: auto auto;
+            .elbi-nav_nav_item {
+                &:nth-of-type(2) {
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                }
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 30px auto;
+            .elbi-nav_nav_item {
+                &:nth-of-type(1) {
+                    img {
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+                &:nth-of-type(2),
+                &:nth-of-type(3) {
+                    font-size: 0.7rem !important;
+                    ul {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        li {
+                            padding: 5px;
+                        }
+                    }
+                }
+                &:nth-of-type(4) {
+                    input {
+                        height: 80% !important;
+                    }
+                    .elbi-nav_nav_item_search {
+                        height: 28px !important;
+                        width: 28px !important;
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width: 460px) {
+            .elbi-nav_nav_item {
+                &:nth-of-type(2) {
+                    font-size: 0.7rem !important;
+                }
+            }
+        }
+        .elbi-nav_nav_item {
+            &:nth-of-type(1) {
+                @include row(flex-start, center);
+            }
+            &:nth-of-type(2) {
+                @include row(center, center);
+                font-family: $sans;
+                color: $gray-b;
+                letter-spacing: 1px;
+                ul {
+                    @include row(space-between, center);
+                    width: 100%;
+                    list-style: none;
+                    padding: 0;
+                    li {
+                        @include row(center, center);
+                        cursor: pointer;
+                        user-select: none;
+                        font-weight: bold;
+                        white-space: nowrap;
+                        &:hover {
+                            color: $orange;
+                            border-top: solid 3px $orange;
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+                @include row(flex-end, center);
+                font-family: $sans;
+                text-transform: uppercase;
+                color: $gray-b;
+                cursor: pointer;
+                user-select: none;
+                span:hover {
+                    color: $orange;
+                }
+            }
+            &:nth-of-type(4) {
+                @include row(flex-end, center);
+                input {
+                    height: 30px;
+                    width: 0;
+                    outline: none;
+                    border: solid 2px $orange;
+                    background-color: $orange-b;
+                    color: $gray-a;
+                    margin-right: -6px;
+                    border-radius: 3px 0 0 3px;
+                    transition: all 200ms ease;
+                    &.isactive {
+                        width: 300px;
+                        @media only screen and (max-width: 600px) {
+                            width: initial;
+                        }
+                        @media only screen and (max-width: 400px) {
+                            width: 100px;
+                        }
+                    }
+                }
+                div {
+                    @include row(center, center);
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 4px;
+                    border: solid 2px $gray-a;
+                    background-color: white;
+                    color: $orange;
+                    user-select: none;
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

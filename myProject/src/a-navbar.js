@@ -107,3 +107,17 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     })
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    let h1 = document.querySelector('#dynamictxt');
+    let string = 'Elbi\u00a0-\u00a0Lepsza\u00a0strona\u00a0techniki!'
+    h1.innerText='';
+    let i=0;
+    (function addLetter(){
+    h1.innerText=h1.innerText+string.charAt(i);
+    i++;
+        if(i<string.length){
+            setTimeout(addLetter, 50);
+        }
+    })();
+});

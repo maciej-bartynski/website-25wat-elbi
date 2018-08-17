@@ -3,7 +3,7 @@
 }
 
 html {
-    color: $black_a;
+    color: $black-yellow;
     font-family: $serif;
     @media screen and (orientation: portrait) {
         font-size: 12px;
@@ -39,13 +39,6 @@ html {
 
 body {
     margin: 0;
-    background-color: $blue-bg_a;
-}
-
-.random {
-    height: 100vh;
-    border-top: solid 1px white;
-}
-header{
-    border-top: none;
+    width: 100%;
+    background-color: $white-yellow;
 }

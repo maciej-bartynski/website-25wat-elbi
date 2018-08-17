@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     let h1 = document.querySelector('#dynamictxt');
-    let string = 'Elbi\u00a0-\u00a0Lepsza\u00a0strona\u00a0techniki!'
+    let string = 'ELBi\u00a0-\u00a0Lepsza\u00a0strona\u00a0techniki!'
     h1.innerText='';
     let i=0;
     (function addLetter(){

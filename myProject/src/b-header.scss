@@ -121,9 +121,17 @@ header.head {
                 margin: 0;
                 padding: 135px 0 0 0;
                 font-family: $sans;
-                font-weight: 400!important;
+                font-weight: bolder;
                 font-size: 2.4rem;
                 letter-spacing: 0.2rem;
+                @media only screen and (max-height: 800px) {
+                    padding-top: 150px;
+                    font-size: 1.5rem;
+                }
+                @media only screen and (max-height: 650px) {
+                    padding-top: 120px;
+                    font-size: 1.5rem;
+                }
             }
             ul {
                 color: white;
@@ -146,10 +154,13 @@ header.head {
                     width: 100%;
                     border-radius: 5px;
                    color: white;
-                   font-weight: 200;
+                   font-weight: bolder;
                    letter-spacing: 0.1rem;
                    font-size: 1.4rem;
                     position: relative;
+                    @media only screen and (max-height: 800px){
+                        font-size: 1rem;
+                    }
                     .dotinli {
                         width: 7px;
                         height: 7px;

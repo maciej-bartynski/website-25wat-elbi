@@ -627,9 +627,23 @@ header.head .container .container_content_item.item-txtmodule h1 {
   margin: 0;
   padding: 135px 0 0 0;
   font-family: "Roboto", sans-serif;
-  font-weight: 400 !important;
+  font-weight: bolder;
   font-size: 2.4rem;
   letter-spacing: 0.2rem;
+}
+
+@media only screen and (max-height: 800px) {
+  header.head .container .container_content_item.item-txtmodule h1 {
+    padding-top: 150px;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  header.head .container .container_content_item.item-txtmodule h1 {
+    padding-top: 120px;
+    font-size: 1.5rem;
+  }
 }
 
 header.head .container .container_content_item.item-txtmodule ul {
@@ -651,10 +665,16 @@ header.head .container .container_content_item.item-txtmodule ul li {
   width: 100%;
   border-radius: 5px;
   color: white;
-  font-weight: 200;
+  font-weight: bolder;
   letter-spacing: 0.1rem;
   font-size: 1.4rem;
   position: relative;
+}
+
+@media only screen and (max-height: 800px) {
+  header.head .container .container_content_item.item-txtmodule ul li {
+    font-size: 1rem;
+  }
 }
 
 header.head .container .container_content_item.item-txtmodule ul li .dotinli {
